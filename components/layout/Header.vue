@@ -6,14 +6,20 @@
     dark
   )
     v-app-bar-nav-icon(@click.stop="drawerLeft = !drawerLeft")
-    v-toolbar-title Test task
+    v-toolbar-title
+      n-link(
+        class="white--text"
+        to="/"
+      ) Test task
     v-spacer
 
 </template>
 
 <script>
 export default {
-
+  data: () => ({
+    drawerLeft: true,
+  }),
 }
 </script>
 

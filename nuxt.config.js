@@ -26,6 +26,7 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/axios',
   ],
 
   /* 

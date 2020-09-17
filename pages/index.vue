@@ -1,33 +1,41 @@
 <template lang="pug">
-  section.container
-    div
-      app-logo
+  section
+    v-card(
+      class="mx-auto my-6"
+      max-width="500"
+    )
+      v-card-text
+        p Необходимо сделать:
+        ol.mb-6
+          li сделать работоспособной кнопку меню сверху слева (чтобы левое меню скрывалjсь и раскрывалось по клику);
+          li в разделе Posts в форме редактирования вместо поля User сделать отдельный компонент для выбора пользователя с поиском по имени и id;
+          li добавить новый раздел с настройками проекта, где будет, пока, одно поле - возможность выбирать светлую или тёмную тему;
+          li указать на ошибки в проекте;
 
-      h1.title Test task
-
-      h2.subtitle Project for test
-
-      .links
-        a(
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        ) Documentation
-        a(
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        ) GitHub
+        .d-flex
+          v-btn(
+            class="mx-2"
+            link
+            href="https://nuxtjs.org/"
+            target="_blank"
+          ) NuxtJS
+          v-btn(
+            class="mx-2"
+            link
+            href="https://vuetifyjs.com/"
+            target="_blank"
+          ) VuetifyJS
+          v-btn(
+            class="mx-2"
+            link
+            href="https://pugjs.org/"
+            target="_blank"
+          ) PugJS
 
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-
 export default {
-  components: {
-    AppLogo
-  }
 }
 </script>
 
