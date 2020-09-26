@@ -1,4 +1,4 @@
-<template lang="pug"> 
+<template lang="pug">
   v-navigation-drawer(
     v-model="drawer"
     app
@@ -28,8 +28,6 @@
 
 <script>
 export default {
-  data: () => ({
-    drawer: true,
-  }),
+  props: ['drawer']
 }
 </script>
