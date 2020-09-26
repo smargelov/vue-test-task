@@ -5,7 +5,7 @@
     color="dark"
     dark
   )
-    v-app-bar-nav-icon(@click.stop="drawerLeft = !drawerLeft")
+    v-app-bar-nav-icon(@click.stop="changeDrawer")
     v-toolbar-title
       n-link(
         class="white--text"
@@ -17,9 +17,7 @@
 
 <script>
 export default {
-  data: () => ({
-    drawerLeft: true,
-  }),
+  props: ['changeDrawer']
 }
 </script>
 

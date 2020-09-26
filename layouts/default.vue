@@ -1,6 +1,8 @@
 <template lang="pug">
   v-app#inspire
-    Header
+    Header(
+      :changeDrawer="changeDrawer"
+    )
     Nav(
       :drawer="drawerLeft"
     )
@@ -11,9 +13,9 @@
 </template>
 
 <script>
-import Header from '~/components/layout/Header'
-import Nav from '~/components/layout/Nav'
-import Footer from '~/components/layout/Footer'
+import Header from '~/components/layout/Header';
+import Nav from '~/components/layout/Nav';
+import Footer from '~/components/layout/Footer';
 
 export default {
   components: {
@@ -26,10 +28,16 @@ export default {
     drawerLeft: true,
   }),
 
-  created () {
-    this.$vuetify.theme.dark = true
+  methods: {
+    changeDrawer() {
+      this.drawerLeft = !this.drawerLeft
+    },
   },
-}
+
+  created() {
+    this.$vuetify.theme.dark = true;
+  },
+};
 </script>
 
 <style lang="sass">
