@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import SettingItem from '../components/layout/settingItem';
+import SettingItem from '../components/layout/SettingItem';
 
 export default {
   components: {SettingItem},
