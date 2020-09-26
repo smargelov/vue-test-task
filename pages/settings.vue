@@ -16,6 +16,7 @@
               setting-item(
                 :setting="setting"
                 :index="index"
+                :changeDark="changeDark"
               )
 
 </template>
@@ -27,14 +28,19 @@ export default {
   components: {SettingItem},
   data() {
     return {
-      settings: [
-        {
+      settings: {
+        setDarkMode: {
           settingName: 'Set dark mode',
-          settingValue: true
-        }
-      ]
+          settingValue: true,
+        },
+      },
     };
   },
+  methods: {
+    changeDark: function () {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+    }
+  }
 
 };
 </script>

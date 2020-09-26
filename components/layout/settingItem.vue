@@ -5,6 +5,7 @@
     td
       v-switch(
         v-model="setting.settingValue"
+        @change="changeDark"
       )
 
 </template>
@@ -13,7 +14,8 @@
 export default {
   props: [
     'setting',
-    'index'
+    'index',
+    'changeDark'
   ],
 
 
