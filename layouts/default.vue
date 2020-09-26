@@ -1,7 +1,9 @@
 <template lang="pug">
   v-app#inspire
     Header
-    Nav
+    Nav(
+      :drawer="drawerLeft"
+    )
     v-main
       nuxt
     Footer
