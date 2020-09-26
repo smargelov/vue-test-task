@@ -1,6 +1,5 @@
 <template lang="pug">
   tr
-    td {{index + 1}}
     td {{setting.settingName}}
     td
       v-switch(

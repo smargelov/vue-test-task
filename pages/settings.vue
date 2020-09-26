@@ -6,7 +6,6 @@
           template
             thead
               tr
-                th #
                 th Setting
                 th Value
             tbody(
@@ -30,7 +29,7 @@ export default {
     return {
       settings: {
         setDarkMode: {
-          settingName: 'Set dark mode',
+          settingName: 'Dark mode',
           settingValue: true,
         },
       },
