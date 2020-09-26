@@ -28,6 +28,12 @@ export default {
     drawerLeft: true,
   }),
 
+  watch: {
+    drawerLeft (value) {
+          return value;
+       }
+  },
+
   methods: {
     changeDrawer() {
       this.drawerLeft = !this.drawerLeft

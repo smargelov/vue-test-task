@@ -1,6 +1,6 @@
 <template lang="pug">
   v-navigation-drawer(
-    v-model="drawer"
+    v-model="drawerState"
     app
     clipped
     left
@@ -37,6 +37,21 @@
 
 <script>
 export default {
-  props: ['drawer']
+  props: {
+    drawer: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      drawerState: this.drawer
+    }
+  },
+  watch: {
+    drawer() {
+      this.drawerState = !this.drawerState
+    }
+  }
 }
 </script>
