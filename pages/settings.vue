@@ -1,31 +1,40 @@
-<template  lang="pug">
+<template lang="pug">
   section
     v-card
       v-card-text
         v-simple-table
-          template(v-slot:default)
+          template
             thead
               tr
                 th #
                 th Setting
                 th Value
-            tbody
-              tr
-                td 1
-                td Set dark mode
-                td
-                  v-switch(
-                    v-model="isDark"
-                  )
+            tbody(
+              v-for="(setting, index) in settings"
+              :key="index"
+            )
+              setting-item(
+                :setting="setting"
+                :index="index"
+              )
+
 </template>
 
 <script>
+import SettingItem from '../components/layout/settingItem';
+
 export default {
-data () {
-  return {
-    isDark: true,
-  }
-}
+  components: {SettingItem},
+  data() {
+    return {
+      settings: [
+        {
+          settingName: 'Set dark mode',
+          settingValue: true
+        }
+      ]
+    };
+  },
 
 };
 </script>
