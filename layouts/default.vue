@@ -1,7 +1,11 @@
 <template lang="pug">
   v-app#inspire
-    Header
-    Nav
+    Header(
+      :changeDrawer="changeDrawer"
+    )
+    Nav(
+      :drawer="drawerLeft"
+    )
     v-main
       nuxt
     Footer
@@ -9,9 +13,9 @@
 </template>
 
 <script>
-import Header from '~/components/layout/Header'
-import Nav from '~/components/layout/Nav'
-import Footer from '~/components/layout/Footer'
+import Header from '~/components/layout/Header';
+import Nav from '~/components/layout/Nav';
+import Footer from '~/components/layout/Footer';
 
 export default {
   components: {
@@ -24,10 +28,22 @@ export default {
     drawerLeft: true,
   }),
 
-  created () {
-    this.$vuetify.theme.dark = true
+  watch: {
+    drawerLeft (value) {
+          return value;
+       }
   },
-}
+
+  methods: {
+    changeDrawer() {
+      this.drawerLeft = !this.drawerLeft
+    },
+  },
+
+  created() {
+    this.$vuetify.theme.dark = true;
+  },
+};
 </script>
 
 <style lang="sass">

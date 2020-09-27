@@ -9,7 +9,6 @@
       )
         template(v-slot:item.title="{ item }")
           n-link(
-            class="white--text"
             :to="`/posts/${item.id}`"
           ) {{ item.title }}
 

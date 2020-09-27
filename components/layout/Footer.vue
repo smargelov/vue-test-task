@@ -2,7 +2,6 @@
   v-footer(
     app
     color="dark"
-    class="white--text"
   )
     span Copyright
     v-spacer

@@ -9,7 +9,6 @@
       )
         template(v-slot:item.username="{ item }")
           n-link(
-            class="white--text"
             :to="`/users/${item.id}`"
           ) {{ item.username }}
 
